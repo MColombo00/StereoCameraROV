@@ -14,7 +14,7 @@ while True:
     red.blink(on_time=0.5, off_time=0.5, background=True)
 
     dt = datetime.datetime.now().strftime("%m-%d-%y_%I%M%S")
-    #print(dt)a
+    #print(dt)aa
 
     os.system("mkdir /home/cam/Desktop/Camera_Tests/" + dt)
 
