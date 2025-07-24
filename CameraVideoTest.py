@@ -1,7 +1,7 @@
 import os, datetime, multiprocessing
 
 dt = datetime.datetime.now().strftime("%m-%d-%y_%I%M%S")
-#print(dt)
+#print(dt)a
 
 os.system("mkdir /home/cam/Desktop/Camera_Tests/" + dt)
 
