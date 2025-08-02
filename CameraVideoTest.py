@@ -33,7 +33,7 @@ while True:
     os.system(
     "rpicam-still --camera 1 --metadata /home/cam/Desktop/timelapseTest/" + dt + "/C1-%04d.json --timeout 30000 --timelapse 2000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C1-%04d.jpg & " +
     "rpicam-still --camera 0 --metadata /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.json --timeout 30000 --timelapse 2000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.jpg"
-)
+    )
 
     for i in range(30):
         os.system(
