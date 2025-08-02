@@ -30,9 +30,10 @@ while True:
 #     "rpicam-vid --codec libav --camera 1 -t 10000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 --preview 0,0,600,600 -o /home/cam/Desktop/Camera_Tests/" + dt + "/C1-" + dt +".mp4")
 
     #Basic timelapse, no image customization
-    os.system( 
-    "rpicam-still --metadata C1-%04d.json --timeout 30000 --timelapse 2000 --camera 1 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C1-%04d.jpg" + "&" +
-    "rpicam-still --metadata C0-%04d.json --timeout 30000 --timelapse 2000 --camera 0 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.jpg")
+    os.system(
+    "rpicam-still --camera 1 --metadata /home/cam/Desktop/timelapseTest/" + dt + "/C1-%04d.json --timeout 30000 --timelapse 2000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C1-%04d.jpg & " +
+    "rpicam-still --camera 0 --metadata /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.json --timeout 30000 --timelapse 2000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.jpg"
+)
 
 #     os.system( 
 #     "rpicam-still --timeout 30000 --timelapse 2000 --camera 0 --autofocus-on-capture --autofocus-range full --width 4656 --height 3496 --autofocus-speed fast -n -o /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.jpg" + "&" +
