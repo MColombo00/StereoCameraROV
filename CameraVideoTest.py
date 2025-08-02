@@ -35,13 +35,12 @@ while True:
     "rpicam-still --camera 0 --metadata /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.json --timeout 30000 --timelapse 2000 --autofocus-mode continuous --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/" + dt + "/C0-%04d.jpg"
     )
 
-    for i in range(30):
-        os.system(
-            f"rpicam-still --camera 1 --metadata /home/cam/Desktop/timelapseTest/{dt}/C1-{i:04}.json --autofocus-on-capture 1 --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/{dt}/C1-{i:04}.jpg & " +
-            f"rpicam-still --camera 0 --metadata /home/cam/Desktop/timelapseTest/{dt}/C0-{i:04}.json --autofocus-on-capture 1 --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/{dt}/C0-{i:04}.jpg"
-        )
-        time.sleep(2)
-
+    # for i in range(30):
+    #     os.system(
+    #         f"rpicam-still --camera 1 --metadata /home/cam/Desktop/timelapseTest/{dt}/C1-{i:04}.json --autofocus-on-capture 1 --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/{dt}/C1-{i:04}.jpg & " +
+    #         f"rpicam-still --camera 0 --metadata /home/cam/Desktop/timelapseTest/{dt}/C0-{i:04}.json --autofocus-on-capture 1 --autofocus-range full --autofocus-speed fast --width 4656 --height 3496 -o /home/cam/Desktop/timelapseTest/{dt}/C0-{i:04}.jpg"
+    #     )
+    #     time.sleep(2)
     
     red.off()
     blue.blink(on_time=0.2,off_time=0.2,n=5, background=False)
