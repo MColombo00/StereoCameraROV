@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Camera Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/cam/Desktop/Camera_Tests/StereoCameraROV/CameraVideoTest.py
+User=cam
+WorkingDirectory=/home/cam/Desktop/Camera_Tests
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

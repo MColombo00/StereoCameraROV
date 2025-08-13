@@ -1,9 +1,0 @@
-width=4656
-height=3496
-shutter=6250
-gain=2.0
-autofocus-on-capture=
-autofocus-range=full
-autofocus-speed=fast
-
-
